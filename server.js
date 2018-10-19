@@ -33,8 +33,8 @@
     app.use(bodyParser.urlencoded({ extended:true }));
     app.use(express.static(path.join(__dirname, 'public')));
     app.use(express.static(path.join(__dirname, '/node_modules')));
-     app.use('/api', appRoutes);
-    app.get('*', function(req,res){
+     app.use('/', appRoutes);
+    app.get('/', function(req,res){
         res.sendFile(path.join(__dirname + '/public/views/index.html'));
         // var ip= req.header('x-forwarded-for') || req.connection.remoteAddress;
         //             localStorage.setItem('uIp',ip);

@@ -2,7 +2,7 @@
   "name": "naijahacks-creativeteckies",
   "version": "1.0.0",
   "description": "votera - a decentralized and innovative way to vote",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "test"
   },

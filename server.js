@@ -38,6 +38,7 @@
         res.sendFile(path.join(__dirname + '/public/views/index.html'));
         // var ip= req.header('x-forwarded-for') || req.connection.remoteAddress;
         //             localStorage.setItem('uIp',ip);
+        //             
               
 
     });

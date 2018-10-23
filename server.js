@@ -4,11 +4,10 @@
     const helmet        = require('helmet');
     const app           = express();
     var store = require('store');
-// import store from 'store';
     const server        = require('http').createServer(app);
     const io            = require('socket.io').listen(server);
     
-    const port          = process.env.PORT || 3000;
+    const port          = process.env.PORT || 5000;
     const mongoose      = require('mongoose');
     const logger        = require('morgan');
     const path          = require('path');
@@ -33,7 +32,7 @@
     app.use(bodyParser.urlencoded({ extended:true }));
     app.use(express.static(path.join(__dirname, 'public')));
     app.use(express.static(path.join(__dirname, '/node_modules')));
-     app.use('/', appRoutes);
+     // app.use('/', appRoutes);
     app.get('/', function(req,res){
         res.sendFile(path.join(__dirname + '/public/views/index.html'));
         // var ip= req.header('x-forwarded-for') || req.connection.remoteAddress;
@@ -42,6 +41,28 @@
               
 
     });
+
+    app.get('/login',function(req,res){
+        res.sendFile(path.join(__dirname + '/public/views/login.html'));
+    })
+
+    app.get('/form',function(req,res){
+        res.sendFile(path.join(__dirname + '/public/views/election/form.html'));
+    })
+
+    app.get('/create-election-1',function(req,res){
+        res.sendFile(path.join(__dirname + '/public/views/create-election-1.html'));
+    })
+    app.get('/create-election-2',function(req,res){
+        res.sendFile(path.join(__dirname + '/public/views/create-election-2.html'));
+    })
+    app.get('/create-election-3',function(req,res){
+        res.sendFile(path.join(__dirname + '/public/views/create-election-3.html'));
+    })
+
+    app.get('/election-analysis',function(req,res){
+        res.sendFile(path.join(__dirname + '/public/views/election/election-analysis.html'));
+    })
     
     
     // Connecting to Mongodb Database

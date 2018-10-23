@@ -4,7 +4,9 @@
   "description": "votera - a decentralized and innovative way to vote",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "start": "nodemon --ignore public/ ",
+    "preinstall": "npm i -g pm2 && pm2 install pm2-logrotate"
+
   },
   "repository": {
     "type": "git",

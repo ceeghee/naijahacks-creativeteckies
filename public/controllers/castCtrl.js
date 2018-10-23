@@ -9,8 +9,8 @@
 
 
              vm.vposts=[
-                            {index:1, name:"President"},
-                            {index:2, name:"Vice President"}
+                            {index:1, name:"President"}
+                            // {index:2, name:"Vice President"}
                                     
                         ];
 

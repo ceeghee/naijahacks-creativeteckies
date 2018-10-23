@@ -28,6 +28,8 @@
 <link rel="stylesheet" href="assets/css/magnific-popup.css">
 <!-- Style CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
+<link href="css/countdown.css" rel="stylesheet">
+
 <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
@@ -50,7 +52,7 @@
 <header class="header_wrap fixed-top">
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-lg"> 
-			<a class="navbar-brand page-scroll animation" href="#home_section" data-animation="fadeInDown" data-animation-delay="1s"> 
+			<a class="navbar-brand page-scroll animation" href="/" data-animation="fadeInDown" data-animation-delay="1s"> 
             	<img class="logo_light" src="assets/images/logo.png" alt="logo" /> 
                 <img class="logo_dark" src="assets/images/logo_dark.png" alt="logo" /> 
             </a>
@@ -83,7 +85,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="banner_text text-center">
-                    <h1 class="animation" data-animation="fadeInUp" data-animation-delay="1.1s">Find Election</h1>
+                    <h1 class="animation" data-animation="fadeInUp" data-animation-delay="1.1s">Find Elections</h1>
                 </div>
             </div>
             
@@ -99,15 +101,22 @@
         	<div class="col-lg-6">
             	<div class="authorize_box">
                 	<div class="title_default_dark title_border text-center">
-                    	<h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Nigerian Presidential Election</h4>
+                    	<h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">The University of Wakanda Presidential Election
+                        </h4>
                     </div>
                     <div class="field_form authorize_form">
                     	<form>
+
                         	<div class="form-group col-md-12 animation" data-animation="fadeInUp" data-animation-delay="0.6s">
-                            	<input type="text" class="form-control" required="" placeholder="Enter Id Number" name="username">
+                            	<!-- <input type="text" class="form-control" required="" placeholder="Enter Id Number" name="username"> -->
+                                <h6>The official Wakanda presidential Election</h6>
+                                <div>Election is <span style="color:green">Live !!!</span></div>
                             </div>
                             <div class="form-group col-md-12 text-center animation" data-animation="fadeInUp" data-animation-delay="0.8s">
-                            	<button class="btn btn-default btn-radius" type="submit">Join</button>
+                                <a href="/vote">
+                                    
+                                <button class="btn btn-default btn-radius" type="button">Join</button>
+                                </a>
                             </div>
                         </form>
                     </div>
@@ -117,15 +126,20 @@
             <div class="col-lg-6">
             	<div class="authorize_box">
                 	<div class="title_default_dark title_border text-center">
-                    	<h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Lagos Gubernatorial Election</h4>
+                    	<h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+                        Ubrano Presidential Election
+                        </h4>
                     </div>
                     <div class="field_form authorize_form">
                     	<form>
                         	<div class="form-group col-md-12 animation" data-animation="fadeInUp" data-animation-delay="0.6s">
-                            	<input type="text" class="form-control" required="" placeholder="Enter Id Number "name="username">
+                                <br>
+                            	<h6>The official Ubrano presidential Election</h6>
+                                <div>Election Starts in : <span class="style colorDefinition size_sm" id="timer">
+                 </span></div>
                             </div>
                             <div class="form-group col-md-12 text-center animation" data-animation="fadeInUp" data-animation-delay="0.8s">
-                            	<button class="btn btn-default btn-radius" type="submit">Join</button>
+                            	<button class="btn btn-default btn-radius" type="submit" disabled>Join</button>
                             </div>
                         </form>
                     </div>
@@ -162,6 +176,7 @@
 
 <!-- Latest jQuery --> 
 <script src="assets/js/jquery-1.12.4.min.js"></script> 
+<!-- <script src="/js/timer.js"></script>  -->
 <!-- Latest compiled and minified Bootstrap --> 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script> 
 <!-- owl-carousel min js  --> 
@@ -182,6 +197,25 @@
 <script src="assets/js/jquery.counterup.min.js"></script> 
 <!-- scripts js --> 
 <script src="assets/js/scripts.js"></script>
+
+<script src="js/countdown.js"></script>
+    <script type="text/javascript">
+        
+
+
+         $("#timer").countdown(new Date().getTime()+60000000,  function(event) {
+                    $(this).text( event.strftime('%-Dd:%Hh:%Mm:%Ss') );
+                    if(event.type === 'stoped'){
+                      console.log('am stopped')
+                      $('#timer').html('TIME UP')
+                    }
+                     }).on('finish.countdown', function(e){
+                        console.log(e)
+                      alert('am done')
+                   
+                    
+                  });
+    </script>
 </body>
 
 <!-- Mirrored from bestwebcreator.com/cryptocash/demo/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Oct 2018 14:06:52 GMT -->

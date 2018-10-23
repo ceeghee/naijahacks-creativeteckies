@@ -47,8 +47,8 @@
         res.sendFile(path.join(__dirname + '/public/views/login.html'));
     })
 
-    app.get('/form',function(req,res){
-        res.sendFile(path.join(__dirname + '/public/views/election/form.html'));
+    app.get('/vote',function(req,res){
+        res.sendFile(path.join(__dirname + '/public/views/election/vote.html'));
     })
 
     app.get('/create-election-1',function(req,res){
@@ -63,6 +63,10 @@
 
     app.get('/election-analysis',function(req,res){
         res.sendFile(path.join(__dirname + '/public/views/election/election-analysis.html'));
+    })
+
+    app.get('/find-elections',function(req,res){
+        res.sendFile(path.join(__dirname + '/public/views/find-election.html'));
     })
     
     

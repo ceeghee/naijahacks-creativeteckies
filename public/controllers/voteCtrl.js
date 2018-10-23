@@ -38,7 +38,7 @@
             function funcMain($http,$window,$timeout,$rootScope){
               var vm = this;
 
-               $("#timer").countdown(new Date().getTime()+60000000,  function(event) {
+               $("#timer").countdown(new Date().getTime()+40995000,  function(event) {
                     $(this).text( event.strftime('%-Dd:%Hh:%Mm:%Ss') );
                     if(event.type === 'stoped'){
                       console.log('am stopped')

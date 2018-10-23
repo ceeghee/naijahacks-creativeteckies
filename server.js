@@ -32,6 +32,7 @@
     app.use(bodyParser.urlencoded({ extended:true }));
     app.use(express.static(path.join(__dirname, 'public')));
     app.use(express.static(path.join(__dirname, '/node_modules')));
+    app.use(express.static(path.join(__dirname, '/build/contracts')));
      // app.use('/', appRoutes);
     app.get('/', function(req,res){
         res.sendFile(path.join(__dirname + '/public/views/index.html'));

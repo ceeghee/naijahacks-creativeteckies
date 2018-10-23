@@ -26,6 +26,14 @@
     "url": "https://github.com/ceeghee/naijahacks-creativeteckies/issues"
   },
   "dependencies": {
+    "angular": "^1.6.6",
+    "angular-animate": "^1.6.6",
+    "angular-aria": "^1.6.6",
+    "angular-material": "^1.1.5",
+    "angular-messages": "^1.6.6",
+    "angular-paging": "^2.2.2",
+    "angular-ui-bootstrap": "^2.5.6",
+    "angular-ui-router": "^0.4.3",
     "bcrypt-nodejs": "0.0.3",
     "bitfinex-api-node": "^1.2.1",
     "bitstamp-ws": "^0.1.1",

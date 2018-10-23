@@ -1,0 +1,28 @@
+                        <cast-vote ng-if="vote.castVote"></cast-vote>
+                     
+                      <div data-animation="fadeInDown" data-animation-delay="10s" ng-if="!vote.castVote">
+                      <div class="title_left" align="center">
+                      <h3>Enter your Voter's ID (i.e Matric Number)</h3>
+                      <br>
+                      <!-- <md-progress-linear class="md-warn"  md-mode="query"></md-progress-linear> -->
+                      </div>
+                        <div class="form-group" align="center">
+                          <label class="control-label col-md-4 col-sm-4 col-xs-12"></label>
+                        <div class="col-md-4 col-sm-4 col-xs-12" >
+                          <input type="text" id="first-name" name="voterID" required="required" class="form-control col-md-7 col-xs-12" ng-model="vote.voterID" ng-change="vote.log(vote.voterID)">
+                        </div>
+                        <br>
+                      </div>
+                      <div align="center">
+                        <button type="button" class="btn btn-success btn-lg" ng-click="vote.voteSubmitted();">Submit</button>
+                      </div>
+                     
+                      <div class="ln_solid"></div>
+                      <div class="form-group" align="center">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button class="btn btn-primary" type="button">Cancel</button>
+                          <button class="btn btn-primary" type="reset">Reset</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+                    </div>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="votera">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    <title>Gentelella Alela! | </title>
+
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/countdown.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/angular-material/angular-material.min.css" />
+
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
+
+      <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <!-- <link href="build/css/custom.min.css" rel="stylesheet"> -->
+    <link href="build/css/custom.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md" ng-controller="voteCtrl as vote">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Votera</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+           <!--  <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>John Doe</h2>
+              </div>
+            </div> -->
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a href="/"><i class="fa fa-home"></i> Home <!-- <span class="fa fa-chevron-down"></span> --></a>
+                   <!--  <ul class="nav child_menu">
+                      <li><a href="index.html">Dashboard</a></li>
+                      <li><a href="index2.html">Dashboard2</a></li>
+                      <li><a href="index3.html">Dashboard3</a></li>
+                    </ul> -->
+                  </li>
+                 
+                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Analysis <span class="label label-success pull-right">Coming Soon</span></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+               
+                 
+                </li>
+
+                <li role="presentation" class="dropdown">
+                 
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+        <br> <br> <br>
+            <div class="page-title">
+              <div class="">
+                
+              <h3>
+                Election Ends in : 
+                 <span class="style colorDefinition size_sm" id="timer">
+                 </span>
+              <!-- <span class="pull-right">Status : </span> -->
+              </h3>
+              </div>
+            </div>
+            <br>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+
+                  <div class="x_title_purple">
+                    <div align="center" data-animation="fadeInDown" data-animation-delay="2s">
+                    <h2 align="center"><small>The Federal University of Wakanda Presidential Election</small></h2>
+
+                    </div>
+                    <ul class="nav navbar-right panel_toolbox">
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <voter-login ng-if="vote.showVoterLogin"></voter-login>
+                        <!-- <my-test ng-if="vote.castVote"></my-test> -->
+
+                        <div ng-if="!vote.showVoterLogin">
+                      <div class="title_left" align="center">
+                      <h3>Participate in the Election as a</h3>
+                      <br>
+                      </div>
+                      <div align="center">
+                       <button type="button" class="btn btn-primary btn-lg" ng-click="vote.amVoting();">
+                       &nbsp;&nbsp;&nbsp;&nbsp;Vorter&nbsp;&nbsp;&nbsp;&nbsp;
+                     </button>
+                       <h3><span>OR</span></h3>
+                       <button type="button" class="btn btn-dark btn-lg">Candidate</button>
+                      </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Votera - Bringing Elections to your Doorstep <a href="">votera</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+
+    <!-- Angular Scripts -->
+      <script src="/angular/angular.min.js"></script>
+         <script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
+         <!-- <script src="assets/jsx/1.6.6/angular-animate.min.js"></script> -->
+         <script src="/angular-animate/angular-animate.min.js"></script>
+        <script src="/angular-aria/angular-aria.min.js"></script>
+        <script src="/angular-material/angular-material.min.js"></script>
+        <script src="/angular-messages/angular-messages.min.js"></script>
+        <script src="/angular-messages/angular-messages.min.js"></script>
+
+         <script src="app.js"></script>
+        <script src="routes.js"></script>
+        <!-- controllers -->
+        <script src="controllers/voteCtrl.js"></script>
+        <script src="controllers/castCtrl.js"></script>
+       <!--  <script src="controllers/mainCtrl.js"></script>
+        <script src="controllers/tradeCtrl.js"></script> -->
+        <!-- services -->
+         <!-- <script src="services/userServices.js"></script> -->
+        <script src="services/authServices.js"></script>
+      <!--   <script src="services/tradeServices.js"></script> -->
+
+        <script src="js/truffle-contract.js"></script>
+        <script src="js/web3.min.js"></script>
+        <script src="js/countdown.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+
+    <!-- FastClick -->
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="vendors/iCheck/icheck.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="vendors/moment/min/moment.min.js"></script>
+    <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap-wysiwyg -->
+    <script src="vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- jQuery Tags Input -->
+    <script src="vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <!-- Switchery -->
+    <script src="vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Select2 -->
+    <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Parsley -->
+    <script src="vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- Autosize -->
+    <script src="vendors/autosize/dist/autosize.min.js"></script>
+    <!-- jQuery autocomplete -->
+    <script src="vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- starrr -->
+    <script src="vendors/starrr/dist/starrr.js"></script>
+    <!-- Custom Theme Scripts -->
+    <!-- <script src="build/js/custom.min.js"></script> -->
+    <script src="build/js/custom.js"></script>
+    
+  </body>
+</html>

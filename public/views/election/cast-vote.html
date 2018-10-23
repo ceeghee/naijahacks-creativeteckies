@@ -1,0 +1,97 @@
+                      <div class="title_left" align="center">
+                      <h3>Welcome Voter - Xds8dscnhgf20141587ds</h3>
+                      <br>
+                      </div>
+                       <div class="title_left blue">
+                          <h4><b>Kindly Select a Post Below to view the Available Candidates</b></h4>
+                      </div>
+                        <!-- <br><br> -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                        <label >Election Posts :</label>
+                          <select id="heard" name="post" class="form-control" ng-change="cast.postChanged(cast.post);" ng-model="cast.post" required>
+                            <option value="">Select Post</option>
+                            <!-- <option value="">Select Department</option> -->
+                            <option  value="{{posts.name}}" ng-repeat="posts in cast.vposts">
+                                {{posts.name}}
+                            </option>
+                            <!-- <option value="press">President</option>
+                            <option value="net">Vice President</option>
+                            <option value="mouth">Welfare Director</option> -->
+                          </select>
+                        </div>
+                        <!-- candidates -->
+                        <div class="container" style="width: 650px;">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <!-- <h1 class="text-center">Election Results</h1> -->
+
+                            <hr/>
+                            <br/>
+                            <div id="loader">
+                              <p class="text-center">Loading...</p>
+                              <md-progress-linear class="md-primary"  md-mode="intermediate"></md-progress-linear> 
+                            </div>
+                            <div id="content" style="display: none;">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Votes</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="candidatesResults">
+                                </tbody>
+                              </table>
+                              <hr/>
+                              <form onSubmit="App.castVote(); return false;" id="voter-select">
+                                <div class="form-group">
+                                  <label for="candidatesSelect">Select Candidate to vote for</label>
+                                  <select class="form-control" id="candidatesSelect">
+                                  </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Vote</button>
+                                <hr />
+                              </form>
+                              <p id="accountAddress" class="text-center"></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                        <!-- <div class="col-md-4 col-sm-4 col-xs-12 pull-right" hidden>
+                        <label >Election Candidates :</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" value="Micheal Irapola"  readonly>
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-primary">Vote!</button>
+                            </span>
+                          </div>
+                          <div class="input-group">
+                            <input type="text" class="form-control" value="Sage Ivelowa" readonly>
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-primary">Vote!</button>
+                            </span>
+                          </div>
+                          <div class="input-group">
+                            <input type="text" class="form-control" value="Peter Samson" readonly>
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-primary">Vote!</button>
+                            </span>
+                          </div>
+                        </div>
+                        </div>
+ -->
+                        <div class="form-group" align="center" id="election-analysis">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <hr class="hr_buttom">
+                          <a href="/election-analysis">
+                          <button class="btn btn-dark" type="button">View Election Analysis</button>
+                          </a>
+                         <!--  <button class="btn btn-primary" type="reset">Reset</button>
+                          <button type="submit" class="btn btn-success">Submit</button> -->
+                        </div>
+                      </div>
